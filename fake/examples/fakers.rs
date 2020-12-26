@@ -386,6 +386,13 @@ fn currency_faker() {
     println!("{:?}", val);
 }
 
+fn ecommerce_faker() {
+    use fake::faker::ecommerce::raw::*;
+
+    let val: String = ProductName(EN).fake();
+    println!("{:?}", val);
+}
+
 fn main() {
     lorem_faker();
     name_faker();
@@ -398,6 +405,7 @@ fn main() {
     phone_number_faker();
     filesystem_faker();
     currency_faker();
+    ecommerce_faker();
 
     #[cfg(feature = "http")]
     http_faker();

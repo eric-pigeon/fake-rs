@@ -201,3 +201,9 @@ pub mod administrative {
         HealthInsuranceCode();
     }
 }
+
+pub mod ecommerce {
+    def_fakers! {
+        ProductName();
+    }
+}
